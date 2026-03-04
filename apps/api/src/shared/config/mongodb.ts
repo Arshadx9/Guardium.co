@@ -1,10 +1,10 @@
 import config from "./index.js"
-import mongoose from "mongoose"
+import mongoose , { Connection } from "mongoose"
 import logger from "./logger.js"
 
 class MongoConnection {
 
-    connection : mongoose.Connection | null
+    connection : any | null
 
     constructor (){
         this.connection = null ;
@@ -19,12 +19,12 @@ if(this.connection){
 }
 
 await mongoose.connect(config.mongo.uri)
+this.connection = mongoose.connection as Connection
 
-this.connection = mongoose.connection
 
 logger.info(`connected to Mongodb ${config.mongo.uri}`)
 
-this.connection.on("error" ,(err) =>{
+this.connection.on("error" ,(err : Error) =>{
  logger.error("MongoDB connection error", err)
 })
 
