@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Monitor {
+  id        String   @id @default(uuid())
+  url       String
+  status    String
+  createdAt DateTime @default(now())
+}
+
+model Incident {
+  id         String    @id @default(uuid())
+  monitorId  String
+  startedAt  DateTime  @default(now())
+  resolvedAt DateTime?
+}
