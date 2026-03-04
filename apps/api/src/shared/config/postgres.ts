@@ -24,8 +24,27 @@ getClient() : PrismaClient {
         return this.prisma
 
 
+}
+
+async testconnection(): Promise<void> {
+
+const prisma = this.getClient()
+await prisma.$queryRaw`SELECT NOW()`
+            logger.info("PostgreSQL connected successfully via Prisma")
 
 
 }
 
+async disconnect(): Promise<void>{
+    if(this.prisma){
+        await this.prisma.$disconnect
+        this.prisma = null
+                logger.info("Prisma client disconnected")
+
+    }
 }
+
+
+}
+
+export default new Postgresconnect()
