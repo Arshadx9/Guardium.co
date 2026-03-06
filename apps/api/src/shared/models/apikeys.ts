@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { model, Schema } from "mongoose";
 
 
 const apikeySchema = new Schema({
@@ -26,3 +26,7 @@ const apikeySchema = new Schema({
 
 
 } , {timestamps : true})
+
+const apikey = model("apikey" , apikeySchema)
+
+export default apikey
