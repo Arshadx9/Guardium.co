@@ -11,8 +11,8 @@ const config = {
 
 
     mongo: {
-        uri: process.env.MONGO_URI || 'mongodb://localhost:27017/api_monitoring',
-        dbName: process.env.MONGO_DB_NAME || 'api_monitoring',
+        uri: process.env.MONGO_URI || 'mongodb://localhost:27017/Guardium',
+        dbName: process.env.MONGO_DB_NAME || 'Guardium',
     },
 
     postgres: {
