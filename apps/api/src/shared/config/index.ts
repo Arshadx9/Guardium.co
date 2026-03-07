@@ -27,20 +27,20 @@ const config = {
     rabbitmq: {
         url: process.env.RABBITMQ_URL || 'amqp://localhost:5672',
         queue: process.env.RABBITMQ_QUEUE || 'api_hits',
-        publisherConfirms: process.env.RABBITMQ_PUBLISHER_CONFIRMS === 'true' || false, // MSGS LOST 
+        publisherConfirms: process.env.RABBITMQ_PUBLISHER_CONFIRMS === 'true' || false, 
         retryAttempts: parseInt(process.env.RABBITMQ_RETRY_ATTEMPTS || '3', 10),
         retryDelay: parseInt(process.env.RABBITMQ_RETRY_DELAY || '1000', 10),
     },
 
     jwt: {
-        secret: process.env.JWT_SECRET || "SABKA_VALINTINE_WEEK_KAISE_JA_RAHA_HAI",
-        expiresIn: process.env.JWT_EXPIRES_IN || '24h',
+        secret: ( process.env.JWT_SECRET || "SABKA_VALINTINE_WEEK_KAISE_JA_RAHA_HAI") as string ,
+        expiresIn: (process.env.JWT_EXPIRES_IN  || '24h')as string,
     },
 
 
     rateLimit: {
-        windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000', 10), // 15 minutes
-        maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '1000', 10), // 1000 req / 15 min per IP
+        windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000', 10), 
+        maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '1000', 10), 
     },
 
     cookie: {
