@@ -22,7 +22,7 @@ export const findusernamewithpassword = async(enteredusername : string ) => {
 export const createUser = async (enteredusername : string  , enteredpassword : string ) => {
 
 
-   return   await bizowner.create({
+   return await bizowner.create({
         username : enteredusername,
         password : enteredpassword
     })
