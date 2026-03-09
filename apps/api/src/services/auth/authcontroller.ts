@@ -4,7 +4,7 @@ import config from "../../shared/config/index.js"
 import ResponseFormatter from "../../shared/Utils/Responseformatter.js"
 
 
-export const registercontroller = async (req : Request , res : Response , next : NextFunction) => {
+export const Registercontroller = async (req : Request , res : Response , next : NextFunction) => {
  
  
 try{
@@ -35,7 +35,7 @@ catch(error) {
 
    
 
-export const logincontroller = async (req : Request , res : Response , next: NextFunction) =>{
+export const Logincontroller = async (req : Request , res : Response , next: NextFunction) =>{
 
 
     try{
