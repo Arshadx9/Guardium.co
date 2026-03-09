@@ -35,3 +35,5 @@ return this.channel!
 
 
 }
+
+export default Rabbitmqconnection()
