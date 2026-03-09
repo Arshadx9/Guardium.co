@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from "express"
-import { processHit } from "./ingestservice.js"
+import { processHit } from "./Ingestservice.js"
 import ResponseFormatter from "../../shared/Utils/Responseformatter.js"
 export const ingestcontroller = async (req: Request, res: Response, next: NextFunction) => {
     try {
