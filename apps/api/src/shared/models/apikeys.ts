@@ -27,6 +27,6 @@ const apikeySchema = new Schema({
 
 } , {timestamps : true})
 
-const apikey = model("apikey" , apikeySchema)
+const apikeys = model("apikey" , apikeySchema)
 
-export default apikey
+export default apikeys
