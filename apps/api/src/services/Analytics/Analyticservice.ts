@@ -1,4 +1,4 @@
-import { Totalhits , Hitsbyendpoint ,avglatperendpoint , errorrateperendpoint } from "./analytics.js"
+import { Totalhits , Hitsbyendpoint ,avglatperendpoint , errorrateperendpoint } from "./analyticsrepo.js"
 
 export const gettotalhits = async () => {
     const thetotalhits = await Totalhits()
