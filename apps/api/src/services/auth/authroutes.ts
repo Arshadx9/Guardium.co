@@ -3,9 +3,9 @@ import { Logincontroller, Registercontroller } from "./authcontroller.js";
 import validate from "../../shared/middleware/validate.js";
 import { loginSchema, registerSchema } from "./authschema.js";
 
-const router = Router()
+const authrouter = Router()
 
-router.post('/register',   validate(registerSchema)  , Registercontroller )
-router.post("./login" , validate(loginSchema)     , Logincontroller)
+authrouter.post('/register',   validate(registerSchema)  , Registercontroller )
+authrouter.post("./login" , validate(loginSchema)     , Logincontroller)
 
-export default router
+export default authrouter
