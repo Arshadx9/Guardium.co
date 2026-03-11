@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { ingestcontroller } from "./Ingestcontroller.js";
 
-const router = Router()
+const ingestrouter = Router()
 
-router.post("/hit" , ingestcontroller)
+ingestrouter.post("/hit" , ingestcontroller)
 
-export default router
+export default ingestrouter
