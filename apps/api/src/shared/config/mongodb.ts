@@ -35,7 +35,7 @@ this.connection.on("error" ,(err : Error) =>{
             return this.connection
 }
 
-async diconnect () {
+async disconnect () {
     if(this.connection){
        await mongoose.disconnect()
         this.connection = null
