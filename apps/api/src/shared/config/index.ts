@@ -47,7 +47,10 @@ const config = {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         expiresIn: 24 * 60 * 60 * 1000
-    }
+    },
+    resend: {
+    apiKey: process.env.RESEND_API_KEY || ""
+}
 }
 
 export default config;
