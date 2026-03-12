@@ -3,6 +3,8 @@ import AppError from "../../shared/Utils/Apperror.js"
 import config from "../../shared/config/index.js"
 import apihit from "../../shared/models/apihits.js"
 import logger from "../../shared/config/logger.js"
+import { io } from "../../index.js"
+import { Checknotify } from "../Notifications/notification.js"
 
 export const startprocess = async () => {
 
@@ -21,7 +23,9 @@ channel.consume(config.rabbitmq.queue , async (msg)=>{
         try{
    const hitData = JSON.parse(msg.content.toString())
     await apihit.create(hitData)
+    await Checknotify(hitData)
     channel.ack(msg)
+    io.emit("newHit" , hitData)
             logger.info("Hit saved to MongoDB")
         }
     catch(error){
