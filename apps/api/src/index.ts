@@ -11,6 +11,7 @@ import analrouter from "./services/Analytics/Analyticsroutes.js"
 import Errorhandler from "./shared/middleware/errorhandler.js"
 import config from "./shared/config/index.js"
 import { createServer } from "http"
+import { Server } from "socket.io"
 
 
 const app = express()
@@ -18,6 +19,12 @@ const app = express()
     app.use(cookieParser())
     app.use(RequestLogger)
     const httpserver = createServer(app)
+   export  const io = new Server(httpserver, {
+    cors : {
+        methods :["GET" , "POST"],
+        origin: "http://localhost:3000"
+    }
+   })
 
 
 await MongoConnection.connect()
@@ -41,6 +48,8 @@ app.use("/api/analytics" , analrouter)
         await RabbitMQConnection.close()
         process.exit(0)
     })
+
+    httpserver.listen(config.port)
 
 
 
