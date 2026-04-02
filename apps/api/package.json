@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc -b && node./dist/index.js"
+    "dev": "tsc -b && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "@types/mongoose": "^5.11.96",
     "@types/winston": "^2.4.4",
     "amqplib": "^0.10.9",
+    "cors": "^2.8.6",
     "mongoose": "^9.2.4",
     "prisma": "^7.4.2",
     "typescript": "^5.9.3",
