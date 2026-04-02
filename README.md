@@ -1,197 +1,191 @@
+<p align="center" style="font-size: 28px; font-weight: 700;">
 Guardium
+</p>
 
+<p align="center" style="font-size: 18px;">
 Embed one line. Monitor everything.
+</p>
 
-Guardium is an API monitoring platform.
-Add the SDK to your Express backend and instantly get:
-• Real-time hit tracking via WebSockets
-• Per-endpoint latency and error analytics
-• Email alerts when your API misbehaves
-• A clean dashboard showing live traffic
+Guardium is an API monitoring platform.  
+Add the SDK to your Express backend and instantly get:  
 
-⸻
+• Real-time hit tracking via WebSockets  
+• Per-endpoint latency and error analytics  
+• Email alerts when your API misbehaves  
+• A clean dashboard showing live traffic  
 
-What Guardium Does
+---
 
-• Issues API keys to authenticated users
-• Accepts API hit events through an ingestion endpoint
-• Queues hit events in RabbitMQ for async processing
-• Persists processed hit data in MongoDB
-• Streams incoming hits in real time through WebSockets
-• Computes analytics such as total hits, endpoint distribution, average latency, and error rates
-• Sends alert emails on high latency and elevated error rate (with cooldown)
+What Guardium Does  
 
-⸻
+• Issues API keys to authenticated users  
+• Accepts API hit events through an ingestion endpoint  
+• Queues hit events in RabbitMQ for async processing  
+• Persists processed hit data in MongoDB  
+• Streams incoming hits in real time through WebSockets  
+• Computes analytics such as total hits, endpoint distribution, average latency, and error rates  
+• Sends alert emails on high latency and elevated error rate (with cooldown)  
 
-Monorepo Structure
+---
 
-Guardium/
-├─ apps/
-│  ├─ api/                      Backend service
-│  │  ├─ prisma/                Prisma schema + migrations (Postgres layer)
-│  │  ├─ src/
-│  │  │  ├─ services/
-│  │  │  │  ├─ auth/            Register, login, onboarding
-│  │  │  │  ├─ Client/          API key + profile endpoints
-│  │  │  │  ├─ Ingest/          /hit ingestion endpoint + validation
-│  │  │  │  ├─ Processor/       Rabbit consumer → DB write → websocket emit
-│  │  │  │  ├─ Analytics/       Aggregation endpoints
-│  │  │  │  └─ Notifications/   Resend email alerts
-│  │  │  ├─ shared/
-│  │  │  │  ├─ config/          Mongo, RabbitMQ, Prisma, logger, env
-│  │  │  │  ├─ middleware/      auth, validation, error handler, request logger
-│  │  │  │  ├─ models/          Mongoose schemas
-│  │  │  │  └─ Utils/           AppError, security, response formatting
-│  │  │  └─ index.ts            API bootstrap
-│  └─ web/                      Frontend app (Next.js)
-│     ├─ app/
-│     │  ├─ page.tsx            Landing page
-│     │  ├─ register/           Signup
-│     │  ├─ login/              Login
-│     │  ├─ onboarding/         API key display + copy
-│     │  └─ dashboard/          Dashboard placeholder
-│     └─ Components/
-│        └─ Navbar.tsx
-├─ packages/
-│  └─ sdk/                      Client instrumentation SDK
-│     └─ src/index.ts
-├─ docker-compose.yml           Local infra: Postgres, Mongo, RabbitMQ, pgAdmin
-└─ scripts/
-└─ init-postgres.sql/        Present as directory (currently empty)
+Monorepo Structure  
 
-⸻
+Guardium is organized into a few core parts  
 
-Architecture
+apps/api  
+Backend service containing authentication, ingestion, processing, analytics, and notifications  
 
-Architecture (how a request flows through Guardium)
+apps/web  
+Frontend application (Next.js) handling onboarding and dashboard  
 
-A request hits your API
-Your backend (with Guardium SDK) captures timing, status, and metadata
+packages/sdk  
+Client SDK used to capture and send API hit data  
 
-The SDK sends this data to the ingest endpoint
-The ingest service validates the API key
+docker-compose.yml  
+Runs MongoDB, RabbitMQ, PostgreSQL, and pgAdmin locally  
 
-The event is pushed into a queue (RabbitMQ)
-This keeps your API fast and non-blocking
+scripts  
+Database initialization utilities  
 
-A background processor consumes events from the queue
-It writes structured data into MongoDB
+---
 
-At the same time
-Real-time updates are emitted via WebSockets
-Alert conditions are checked
+Architecture  
 
-If something goes wrong
-Email alerts are triggered
+A request hits your API  
+Your backend (with Guardium SDK) captures timing, status, and metadata  
 
-The frontend dashboard receives live updates
-And displays traffic, latency, and errors in real time
+The SDK sends this data to the ingest endpoint  
+The ingest service validates the API key  
 
+The event is pushed into a queue (RabbitMQ)  
+This keeps your API fast and non-blocking  
 
+A background processor consumes events from the queue  
+It writes structured data into MongoDB  
 
-Tech Stack
+At the same time  
+Real-time updates are emitted via WebSockets  
+Alert conditions are checked  
 
-Backend
-• Node.js + TypeScript
-• Express
-• MongoDB + Mongoose
-• RabbitMQ (AMQP)
-• Socket.IO
-• JWT + cookie-based auth
-• Zod request validation
-• Prisma + PostgreSQL schema scaffold
+If something goes wrong  
+Email alerts are triggered  
 
-Frontend
-• Next.js (App Router)
-• React
-• TypeScript
-• Tailwind CSS
+The frontend dashboard receives live updates  
+And displays traffic, latency, and errors in real time  
 
-SDK
-• TypeScript
-• Middleware-style hit capture
-• Async non-blocking hit dispatch
+---
 
-Infra
-• Docker Compose
-• MongoDB
-• RabbitMQ (+ management UI)
-• PostgreSQL
-• pgAdmin
+Tech Stack  
 
-⸻
+Backend  
+• Node.js + TypeScript  
+• Express  
+• MongoDB + Mongoose  
+• RabbitMQ (AMQP)  
+• Socket.IO  
+• JWT + cookie-based auth  
+• Zod request validation  
+• Prisma + PostgreSQL schema scaffold  
 
-API Surface (Current)
+Frontend  
+• Next.js (App Router)  
+• React  
+• TypeScript  
+• Tailwind CSS  
 
-Auth
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/complete-onboarding  (protected)
+SDK  
+• TypeScript  
+• Middleware-style hit capture  
+• Async non-blocking hit dispatch  
 
-Client
-GET /api/client/getapikey  (protected)
-GET /api/client/getprofile (protected)
+Infra  
+• Docker Compose  
+• MongoDB  
+• RabbitMQ (+ management UI)  
+• PostgreSQL  
+• pgAdmin  
 
-Ingest
-POST /api/ingest/hit
+---
 
-Analytics
-GET /api/analytics/totalhits   (protected)
-GET /api/analytics/hitsbyend   (protected)
-GET /api/analytics/avglatency  (protected)
-GET /api/analytics/errorrate   (protected)
+API Surface (Current)  
 
-⸻
+Auth  
+POST /api/auth/register  
+POST /api/auth/login  
+POST /api/auth/complete-onboarding  (protected)  
 
-Local Development Setup
+Client  
+GET /api/client/getapikey  (protected)  
+GET /api/client/getprofile (protected)  
 
-Prerequisites
-Node.js 20+
-npm
-Docker + Docker Compose
-	
-1. Clone and install
+Ingest  
+POST /api/ingest/hit  
 
-git clone 
-cd Guardium
-npm install
-	
-2. Start infrastructure
+Analytics  
+GET /api/analytics/totalhits   (protected)  
+GET /api/analytics/hitsbyend   (protected)  
+GET /api/analytics/avglatency  (protected)  
+GET /api/analytics/errorrate   (protected)  
 
-docker compose up -d
+---
 
-Infra defaults:
-MongoDB: 27017
-RabbitMQ: 5672
-RabbitMQ Management: 15672
-PostgreSQL: 5432
-pgAdmin: 8080
+Local Development Setup  
 
-3. Run backend
-cd apps/api
-npm install
-npm run dev
+Prerequisites  
+Node.js 20+  
+npm  
+Docker + Docker Compose  
 
-4. Run frontend
-cd apps/web
-npm install
-npm run dev
+1) Clone and install  
 
-Frontend runs on:
-http://localhost:3000
+git clone <your-repo-url>  
+cd Guardium  
+npm install  
 
-Backend runs on:
-http://localhost:5000
+2) Start infrastructure  
 
-⸻
+docker compose up -d  
 
-SDK Usage
+Infra defaults:  
+MongoDB: 27017  
+RabbitMQ: 5672  
+RabbitMQ Management: 15672  
+PostgreSQL: 5432  
+pgAdmin: 8080  
 
-Current SDK package path:
-packages/sdk
+3) Run backend  
 
-High-level usage:
-	1.	Initialize SDK with your Guardium API key
-	2.	Attach middleware to your Express app
-	3.	SDK captures request timing and sends hit payload to ingest endpoint
+cd apps/api  
+npm install  
+npm run dev  
 
+4) Run frontend  
+
+cd apps/web  
+npm install  
+npm run dev  
+
+Frontend runs on:  
+http://localhost:3000  
+
+Backend runs on:  
+http://localhost:5000  
+
+---
+
+SDK Usage  
+
+Current SDK package path:  
+packages/sdk  
+
+High-level usage:  
+
+1. Initialize SDK with your Guardium API key  
+2. Attach middleware to your Express app  
+3. SDK captures request timing and sends hit payload to ingest endpoint  
+
+---
+
+<p align="center" style="font-size: 14px; opacity: 0.7;">
+Built for developers who want observability without unnecessary complexity.
+</p>
