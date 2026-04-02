@@ -1,12 +1,27 @@
 {
     "name": "@guardium/sdk",
     "version": "1.0.0",
-    "description": "Guardium API monitoring SDK",
+    "description": "Lightweight API monitoring SDK for Guardium. Capture and send API hit metrics in real-time.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
     },
-    "keywords": ["api", "monitoring", "guardium"],
-    "license": "MIT"
+    "keywords": ["api", "monitoring", "guardium", "performance", "analytics"],
+    "license": "MIT",
+    "author": "arshadzeon <arshadalib007@gmail.com>",
+    "homepage": "https://github.com/arshadzeon/guardium#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/arshadzeon/guardium.git",
+        "directory": "packages/sdk"
+    },
+    "bugs": {
+        "url": "https://github.com/arshadzeon/guardium/issues"
+    },
+    "files": ["dist", "README.md"],
+    "engines": {
+        "node": ">=16.0.0"
+    }
 }
