@@ -1,0 +1,12 @@
+{
+    "name": "@guardium/sdk",
+    "version": "1.0.0",
+    "description": "Guardium API monitoring SDK",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "keywords": ["api", "monitoring", "guardium"],
+    "license": "MIT"
+}
