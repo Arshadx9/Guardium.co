@@ -12,9 +12,15 @@ import Errorhandler from "./shared/middleware/errorhandler.js"
 import config from "./shared/config/index.js"
 import { createServer } from "http"
 import { Server } from "socket.io"
+import cors from "cors"
 
 
 const app = express()
+
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true
+}))
     app.use(express.json())
     app.use(cookieParser())
     app.use(RequestLogger)
@@ -39,17 +45,15 @@ app.use("/api/analytics" , analrouter)
 
  app.use(Errorhandler)
 
-   app.listen(config.port, () => {
-        console.log(`Server running on port ${config.port}`)
-    })
-
     process.on("SIGTERM", async () => {
         await MongoConnection.disconnect()
         await RabbitMQConnection.close()
         process.exit(0)
     })
 
-    httpserver.listen(config.port)
+    httpserver.listen(config.port, () => {
+        console.log(`Server running on port ${config.port}`)
+    })
 
 
 
