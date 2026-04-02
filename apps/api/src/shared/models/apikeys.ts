@@ -18,9 +18,9 @@ const apikeySchema = new Schema({
 
     },
 
-    name : {type : String , required : true} , 
+    name : {type : String } , 
 
-    createdBy : {type : mongoose.Schema.Types.ObjectId , ref : 'bizowner' , required : true },
+    createdBy : {type : mongoose.Schema.Types.ObjectId , ref : 'bizowner'},
 
     
 
