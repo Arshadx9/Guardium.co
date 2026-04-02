@@ -1,7 +1,7 @@
 import apikey from "../../shared/models/apikeys.js";
 import AppError from "../../shared/Utils/Apperror.js"
 import Securityutils from "../../shared/Utils/Securityutils.js"
-import { createUser, findByUsername , createapikey , findusernamewithpassword } from "./authrepository.js"
+import { createUser, findByUsername , createapikey , findusernamewithpassword, setHasOnboarded } from "./authrepository.js"
 import crypto from "crypto";
 
 
@@ -10,7 +10,7 @@ export const register = async (enteredusername : string ,enteredpassword : strin
 
 
  const existingUser = await findByUsername(enteredusername)
-    if (!existingUser) {
+    if (existingUser) {
         throw new AppError("Username already taken", 400)
     }
 
@@ -53,7 +53,11 @@ const generatedtoken =  Securityutils.generateToken({userId : existingUser._id})
 
 return({
     user : existingUser,
-    token: generatedtoken
+    token: generatedtoken,
+    hasOnboarded: existingUser.hasOnboarded
 })
+}
 
+export const completeOnboarding = async (userId: string) => {
+    return await setHasOnboarded(userId)
 }
