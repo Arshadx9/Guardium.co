@@ -1,10 +1,11 @@
-import amqp, { Connection, Channel } from "amqplib"
+import amqp from "amqplib"
+import type { Channel, ChannelModel } from "amqplib"
 import config from "./index.js"
 import logger from "./logger.js"
 
 class RabbitMQConnection {
 
-    private connection: Connection | null = null
+    private connection: ChannelModel | null = null
     private channel: Channel | null = null
     private isConnecting: boolean = false
 
@@ -62,6 +63,9 @@ class RabbitMQConnection {
             })
 
             this.isConnecting = false
+            if (!this.channel) {
+                throw new Error("RabbitMQ channel was not initialized")
+            }
             return this.channel
 
         } catch (error) {
@@ -88,7 +92,7 @@ class RabbitMQConnection {
             }
             if (this.connection) {
                 await this.connection.close()
-                this.connection = nullconfig.rabbitmq.queue
+                this.connection = null
             }
             logger.info("RabbitMQ connection closed")
         } catch (error) {

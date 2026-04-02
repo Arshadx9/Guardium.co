@@ -1,5 +1,6 @@
 import config from "./index.js"
-import mongoose , { Connection } from "mongoose"
+import mongoose from "mongoose"
+import type { Connection } from "mongoose"
 import logger from "./logger.js"
 
 class MongoConnection {
