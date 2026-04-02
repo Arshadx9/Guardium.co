@@ -1,0 +1,103 @@
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-01 23:05:31"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-01 23:05:31"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ","service":"api-monitoring","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2026-04-01 23:05:31"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 02:46:35"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 02:46:35"}
+{"code":"ECONNREFUSED","level":"error","message":"Failed to connect to RabbitMQ","service":"api-monitoring","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2026-04-02 02:46:35"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 02:49:51"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 02:49:51"}
+{"level":"error","message":"Failed to connect to RabbitMQ Handshake terminated by server: 403 (ACCESS-REFUSED) with message \"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.\"","service":"api-monitoring","stack":"Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message \"ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.\"\n    at afterStartOk (/Users/arshad/Documents/Guardium/apps/api/node_modules/amqplib/lib/connection.js:169:16)\n    at /Users/arshad/Documents/Guardium/apps/api/node_modules/amqplib/lib/connection.js:104:11\n    at Socket.recv (/Users/arshad/Documents/Guardium/apps/api/node_modules/amqplib/lib/connection.js:453:9)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at emitReadable_ (node:internal/streams/readable:832:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:88:21)","timestamp":"2026-04-02 02:49:51"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 02:53:35"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 02:53:35"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 02:53:35"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 02:54:41"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 02:54:41"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 02:54:41"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 02:54:41"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 03:10:15"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 03:10:15"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 03:10:15"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 03:15:19"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 03:15:19"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 03:15:20"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 03:15:20"}
+{"ip":"::1","level":"info","message":"OPTIONS /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 03:17:12","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15"}
+{"ip":"::1","level":"info","message":"OPTIONS /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 03:19:16","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 03:20:44"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 03:20:44"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 03:20:44"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 03:20:44"}
+{"ip":"::1","level":"info","message":"OPTIONS /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 03:21:43","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"OPTIONS /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 03:23:51","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 03:47:37"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 03:47:37"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 03:47:38"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 03:47:38"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 03:48:39","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 04:27:16"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 04:27:16"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 04:27:16"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 04:27:16"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:28:05","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:29:48","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:29:58","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:30:04","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:30:14","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 04:43:46"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 04:43:46"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 04:43:46"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 04:43:46"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:44:33","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"error","message":"apikey validation failed: createdBy: Path `createdBy` is required., name: Path `name` is required.","service":"api-monitoring","timestamp":"2026-04-02 04:44:33"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 04:44:50","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"error","message":"apikey validation failed: createdBy: Path `createdBy` is required., name: Path `name` is required.","service":"api-monitoring","timestamp":"2026-04-02 04:44:50"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 05:01:35"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 05:01:35"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 05:01:35"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 05:01:35"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 05:02:22","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 05:02:31","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"error","message":"apikey validation failed: createdBy: Path `createdBy` is required., name: Path `name` is required.","service":"api-monitoring","timestamp":"2026-04-02 05:02:31"}
+{"level":"error","message":"RabbitMQ connection error Heartbeat timeout","service":"api-monitoring","stack":"Error: Heartbeat timeout\n    at Heart.<anonymous> (/Users/arshad/Documents/Guardium/apps/api/node_modules/amqplib/lib/connection.js:379:21)\n    at Heart.emit (node:events:508:28)\n    at Heart.runHeartbeat (/Users/arshad/Documents/Guardium/apps/api/node_modules/amqplib/lib/heartbeat.js:88:7)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)","timestamp":"2026-04-02 07:11:55"}
+{"level":"warn","message":"RabbitMQ connection closed","service":"api-monitoring","timestamp":"2026-04-02 07:11:55"}
+{"level":"error","message":"MongoDB Disconnected","service":"api-monitoring","timestamp":"2026-04-02 09:09:34"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 09:11:44"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 09:11:44"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 09:11:44"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 09:11:44"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 09:12:27","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 15:26:56"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 15:26:56"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 15:26:56"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 15:26:56"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 15:28:07","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","service":"api-monitoring","timestamp":"2026-04-02 15:28:44","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:28:46","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:28:46","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:28:46","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:28:46","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","service":"api-monitoring","timestamp":"2026-04-02 15:31:03","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:31:04","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:31:04","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:31:04","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:31:04","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 15:41:48"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 15:41:48"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 15:41:48"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 15:41:48"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 15:42:26","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","service":"api-monitoring","timestamp":"2026-04-02 15:42:40","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:42:41","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:42:41","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:42:41","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:42:41","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"level":"info","message":"connected to Mongodb mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/","service":"api-monitoring","timestamp":"2026-04-02 15:48:02"}
+{"level":"info","message":"Connecting to RabbitMQ","service":"api-monitoring","timestamp":"2026-04-02 15:48:02"}
+{"level":"info","message":"RabbitMQ connected, queue:","service":"api-monitoring","timestamp":"2026-04-02 15:48:02"}
+{"level":"info","message":"Processor started, listening to queue:","service":"api-monitoring","timestamp":"2026-04-02 15:48:02"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","service":"api-monitoring","timestamp":"2026-04-02 15:48:59","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","service":"api-monitoring","timestamp":"2026-04-02 15:49:07","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:49:07","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/complete-onboarding","service":"api-monitoring","timestamp":"2026-04-02 15:49:08","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:49:08","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/client/getapikey","service":"api-monitoring","timestamp":"2026-04-02 15:49:08","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
