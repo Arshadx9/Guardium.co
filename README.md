@@ -1,22 +1,30 @@
-<p align="center" style="font-size: 28px; font-weight: 700;">
+<p align="center" style="font-size: 32px; font-weight: 800;">
 Guardium
 </p>
 
-<p align="center" style="font-size: 18px;">
+<p align="center" style="font-size: 18px; color: #555;">
 Embed one line. Monitor everything.
 </p>
 
+<p align="center" style="max-width: 700px;">
 Guardium is an API monitoring platform.  
-Add the SDK to your Express backend and instantly get:  
+Add the SDK to your Express backend and instantly get:
+</p>
 
+<p align="center">
 • Real-time hit tracking via WebSockets  
 • Per-endpoint latency and error analytics  
 • Email alerts when your API misbehaves  
 • A clean dashboard showing live traffic  
+</p>
 
 ---
 
-What Guardium Does  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+What Guardium Does
+</p>
+
+<div style="line-height: 1.8;">
 
 • Issues API keys to authenticated users  
 • Accepts API hit events through an ingestion endpoint  
@@ -26,11 +34,19 @@ What Guardium Does
 • Computes analytics such as total hits, endpoint distribution, average latency, and error rates  
 • Sends alert emails on high latency and elevated error rate (with cooldown)  
 
+</div>
+
 ---
 
-Monorepo Structure  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+Monorepo Structure
+</p>
 
-Guardium is organized into a few core parts  
+<p style="color: #555;">
+Guardium is organized into a few core parts
+</p>
+
+<div style="line-height: 1.8;">
 
 apps/api  
 Backend service containing authentication, ingestion, processing, analytics, and notifications  
@@ -47,9 +63,15 @@ Runs MongoDB, RabbitMQ, PostgreSQL, and pgAdmin locally
 scripts  
 Database initialization utilities  
 
+</div>
+
 ---
 
-Architecture  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+Architecture
+</p>
+
+<div style="line-height: 1.8;">
 
 A request hits your API  
 Your backend (with Guardium SDK) captures timing, status, and metadata  
@@ -73,9 +95,15 @@ Email alerts are triggered
 The frontend dashboard receives live updates  
 And displays traffic, latency, and errors in real time  
 
+</div>
+
 ---
 
-Tech Stack  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+Tech Stack
+</p>
+
+<div style="line-height: 1.8;">
 
 Backend  
 • Node.js + TypeScript  
@@ -105,87 +133,97 @@ Infra
 • PostgreSQL  
 • pgAdmin  
 
+</div>
+
 ---
 
-API Surface (Current)  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+API Surface
+</p>
+
+<div style="line-height: 1.8;">
 
 Auth  
 POST /api/auth/register  
 POST /api/auth/login  
-POST /api/auth/complete-onboarding  (protected)  
+POST /api/auth/complete-onboarding  
 
 Client  
-GET /api/client/getapikey  (protected)  
-GET /api/client/getprofile (protected)  
+GET /api/client/getapikey  
+GET /api/client/getprofile  
 
 Ingest  
 POST /api/ingest/hit  
 
 Analytics  
-GET /api/analytics/totalhits   (protected)  
-GET /api/analytics/hitsbyend   (protected)  
-GET /api/analytics/avglatency  (protected)  
-GET /api/analytics/errorrate   (protected)  
+GET /api/analytics/totalhits  
+GET /api/analytics/hitsbyend  
+GET /api/analytics/avglatency  
+GET /api/analytics/errorrate  
+
+</div>
 
 ---
 
-Local Development Setup  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+Local Development Setup
+</p>
+
+<div style="line-height: 1.8;">
 
 Prerequisites  
 Node.js 20+  
 npm  
 Docker + Docker Compose  
 
-1) Clone and install  
+Clone and install  
 
-git clone <your-repo-url>  
-cd Guardium  
-npm install  
+<pre>git clone &lt;your-repo-url&gt;
+cd Guardium
+npm install</pre>
 
-2) Start infrastructure  
+Start infrastructure  
 
-docker compose up -d  
+<pre>docker compose up -d</pre>
 
-Infra defaults:  
-MongoDB: 27017  
-RabbitMQ: 5672  
-RabbitMQ Management: 15672  
-PostgreSQL: 5432  
-pgAdmin: 8080  
+Run backend  
 
-3) Run backend  
+<pre>cd apps/api
+npm install
+npm run dev</pre>
 
-cd apps/api  
-npm install  
-npm run dev  
+Run frontend  
 
-4) Run frontend  
+<pre>cd apps/web
+npm install
+npm run dev</pre>
 
-cd apps/web  
-npm install  
-npm run dev  
+Frontend → http://localhost:3000  
+Backend → http://localhost:5000  
 
-Frontend runs on:  
-http://localhost:3000  
-
-Backend runs on:  
-http://localhost:5000  
+</div>
 
 ---
 
-SDK Usage  
+<p style="font-size: 20px; font-weight: 600; color: #222;">
+SDK Usage
+</p>
 
-Current SDK package path:  
+<div style="line-height: 1.8;">
+
+Current SDK package path  
 packages/sdk  
 
-High-level usage:  
+High-level usage  
 
 1. Initialize SDK with your Guardium API key  
 2. Attach middleware to your Express app  
 3. SDK captures request timing and sends hit payload to ingest endpoint  
 
+</div>
+
 ---
 
-<p align="center" style="font-size: 14px; opacity: 0.7;">
+<p align="center" style="font-size: 13px; color: #888;">
 Built for developers who want observability without unnecessary complexity.
 </p>
