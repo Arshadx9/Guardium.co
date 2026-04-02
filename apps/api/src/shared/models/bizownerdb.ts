@@ -7,6 +7,7 @@ const bizownerSchema = new Schema({
     username : {type : String , unique : true},
     password : {type : String },
     isActive : {type : Boolean , default : true} , 
+    hasOnboarded : {type : Boolean}
 
 })
 
