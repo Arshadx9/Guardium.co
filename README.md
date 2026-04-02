@@ -141,9 +141,23 @@ Node.js 20+
 npm  
 Docker + Docker Compose  
 
-Clone and install  
+Clone, install, and run everything  
 
 ```bash
 git clone <your-repo-url>
 cd Guardium
 npm install
+
+docker compose up -d
+
+cd apps/api
+npm install
+npm run dev
+
+cd ../web
+npm install
+npm run dev
+
+Frontend → http://localhost:3000
+Backend → http://localhost:5000
+
