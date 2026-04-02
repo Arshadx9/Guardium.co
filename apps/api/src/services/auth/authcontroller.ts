@@ -1,8 +1,8 @@
 import type { NextFunction , Request , Response } from "express"
-import { login, register } from "./authservice.js"
+import { login, register, completeOnboarding } from "./authservice.js"
 import config from "../../shared/config/index.js"
 import ResponseFormatter from "../../shared/Utils/Responseformatter.js"
-
+import AppError from "../../shared/Utils/Apperror.js"
 
 export const Registercontroller = async (req : Request , res : Response , next : NextFunction) => {
  
@@ -18,6 +18,9 @@ try{
     maxAge : config.cookie.expiresIn
 
    } )
+
+
+   
 
    res.status(201).json(
     ResponseFormatter.success({
@@ -49,6 +52,15 @@ res.cookie("token" , result.token  ,{
     maxAge : config.cookie.expiresIn
 })
 
+  return res.status(200).json(
+            ResponseFormatter.success(
+                {
+                    user: result.user
+                },
+                "logged in successfully"
+            )
+        )
+
 
     }
 
@@ -57,6 +69,16 @@ res.cookie("token" , result.token  ,{
     }
 
 
+}
+
+export const completeOnboardingController = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        if (!req.userId) throw new AppError("Unauthorized", 401)
+        await completeOnboarding(req.userId)
+        res.status(200).json(ResponseFormatter.success(null, "Onboarding complete"))
+    } catch (error) {
+        next(error)
+    }
 }
 
 

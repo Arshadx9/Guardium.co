@@ -24,7 +24,8 @@ export const createUser = async (enteredusername : string  , enteredpassword : s
 
    return await bizowner.create({
         username : enteredusername,
-        password : enteredpassword
+        password : enteredpassword,
+        hasOnboarded: false
     })
 
 }
@@ -34,4 +35,12 @@ export const createapikey = async (enteredapikey : string, enteredClientID : str
         key : enteredapikey,
         clientID : enteredClientID
     })
+}
+
+export const setHasOnboarded = async (userId: string) => {
+    return await bizowner.findByIdAndUpdate(userId, { hasOnboarded: true })
+}
+
+export const completeOnboarding = async (userId: string) => {
+    return await setHasOnboarded(userId)
 }
