@@ -1,6 +1,6 @@
 import Navbar from "@/Components/Navbar";
 
-
+import Link from "next/link"
 
 export default function Homepage ()  {
   return(
@@ -29,15 +29,25 @@ export default function Homepage ()  {
   <div> Get instant alerts before your users notice.</div>
  
 </div>
-
 <div className=" flex  gap-2  justify-center p-8">
+<Link href="/register">
 <button className="px-4 py-2 rounded-lg bg-gray-100 border text-black font-mono tracking-tighter">
 Register
 </button>
 
+</Link>
+
+
+<Link href="/login">
+
+
 <button className="px-4 py-2 rounded-lg bg-gray-100 border text-black font-mono tracking-tighter">
 Login
 </button>
+
+</Link>
+
+
 
 </div>
 
