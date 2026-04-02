@@ -14,4 +14,4 @@ constructor (message : string , statusCode : number){
 
 }
 
-export default AppError
+export default AppError 
