@@ -20,7 +20,7 @@ async function login (){
         const password = passwordRef.current?.value
 
     try{
-    const response = await axios.post("http://localhost:5000/api/auth/login", {
+    const response = await axios.post("http://13.49.148.61:5000/api/auth/login", {
      username , 
      password 
     }, {
@@ -56,4 +56,4 @@ Login
 
 }
 
-export default Login 
+export default Login

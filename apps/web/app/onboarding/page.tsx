@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+
 const Onboarding = () => {
     const [copied, setCopied] = useState(false)
     const [apiKey, setApiKey] = useState("")
@@ -9,15 +11,14 @@ const Onboarding = () => {
     useEffect(() => {
         const loadOnboardingData = async () => {
             try {
-                await axios.post("http://localhost:5000/api/auth/complete-onboarding", {}, {
+                await axios.post(`${API_URL}/api/auth/complete-onboarding`, {}, {
                     withCredentials: true
                 })
 
-                const res = await axios.get("http://localhost:5000/api/client/getapikey", {
+                const res = await axios.get(`${API_URL}/api/client/getapikey`, {
                     withCredentials: true
                 })
 
-                // API shape: data.apikey.key
                 setApiKey(res.data?.data?.apikey?.key ?? "")
             } catch (error) {
                 console.error("Failed to load onboarding data", error)

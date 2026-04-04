@@ -18,7 +18,7 @@ async function register(){
     const password = passwordRef.current?.value
 
     try{
-      const response =   await axios.post("http://localhost:5000/api/auth/register", {
+      const response =   await axios.post("http://13.49.148.61:5000/api/auth/register", {
         username , 
         password
       }, {
