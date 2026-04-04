@@ -1,4 +1,4 @@
-const INGEST_URL = "https://guardium.com/api/ingest/hit"
+const INGEST_URL = "http://13.49.148.61:5000/api/ingest/hit"
 
 let guardiumApiKey: string = ""
 
