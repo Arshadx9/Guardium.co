@@ -18,8 +18,8 @@ import cors from "cors"
 const app = express()
 
 app.use(cors({
-    origin:"http://localhost:3000",
-    credentials:true
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+    credentials: true
 }))
     app.use(express.json())
     app.use(cookieParser())
@@ -28,7 +28,7 @@ app.use(cors({
    export  const io = new Server(httpserver, {
     cors : {
         methods :["GET" , "POST"],
-        origin: "http://localhost:3000"
+        origin: process.env.CORS_ORIGIN || "http://localhost:3000"
     }
    })
 
@@ -54,6 +54,3 @@ app.use("/api/analytics" , analrouter)
     httpserver.listen(config.port, () => {
         console.log(`Server running on port ${config.port}`)
     })
-
-
-
