@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+const API_URL = "http://13.49.148.61:5000"
 
 const Onboarding = () => {
     const [copied, setCopied] = useState(false)
