@@ -23,16 +23,16 @@ endpoint : {
     required : true 
  },
 
- statuscode : {
+ statusCode : {
     type : Number ,
     required : true 
  },
 
- latency : {
+ latencyMs : {
    type : Number ,
     required : true  
  } ,
- ipAdress :{
+ ip :{
     type : String , 
     required : true 
  },
