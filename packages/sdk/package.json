@@ -1,6 +1,6 @@
 {
     "name": "@guardium/sdk",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Lightweight API monitoring SDK for Guardium. Capture and send API hit metrics in real-time.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
