@@ -9,6 +9,17 @@ type EndpointHit = {
     count: number
 }
 
+type LatencyData = {
+    _id: string
+    count: number
+    avgLatency: number
+}
+
+type ErrorData = {
+    _id: string
+    errorRate?: number
+}
+
 export default function DashboardPage() {
 
     const [totalHits, setTotalHits] = useState(0)
@@ -28,9 +39,25 @@ export default function DashboardPage() {
                 ])
 
                 setTotalHits(hitsRes.data.data.yourhits)
-                sethitsbyendpoint(endpointRes.data.data.yourhits)
-                setavglatency(latencyRes.data.data.yourlatency)
-                seterrorrate(errorRes.data.data.yourrate)
+
+                const endpointData: { _id: string, count: number }[] = endpointRes.data.data.yourhits
+                sethitsbyendpoint(endpointData.map((e) => ({
+                    endpoint: e._id,
+                    count: e.count
+                })))
+
+                const latencyData: LatencyData[] = latencyRes.data.data.yourlatency
+                const avgMs = latencyData.length > 0
+                    ? Math.round(latencyData.reduce((sum: number, e: LatencyData) => sum + e.avgLatency, 0) / latencyData.length)
+                    : 0
+                setavglatency(avgMs)
+
+                const errorData: ErrorData[] = errorRes.data.data.yourrate
+                const avgRate = errorData.length > 0
+                    ? Math.round(errorData.reduce((sum: number, e: ErrorData) => sum + (e.errorRate || 0), 0) / errorData.length)
+                    : 0
+                seterrorrate(avgRate)
+
             } catch (error) {
                 console.error("Failed to fetch analytics", error)
             } finally {
