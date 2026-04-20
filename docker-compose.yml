@@ -44,7 +44,7 @@ services:
       RABBITMQ_QUEUE: api_hits
       JWT_SECRET: ${JWT_SECRET}
       RESEND_API_KEY: ${RESEND_API_KEY}
-      CORS_ORIGIN: http://13.49.148.61:3000
+      CORS_ORIGIN: http://13.63.125.183:3000
     ports:
       - "5000:5000"
     networks:
