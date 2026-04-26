@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const API_URL = "http://13.63.125.183:5000"
+const API_URL = "http://13.63.45.239:5000"
 
 const Onboarding = () => {
     const [copied, setCopied] = useState(false)
