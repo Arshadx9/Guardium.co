@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guardium-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guardium-api
+  template:
+    metadata:
+      labels:
+        app: guardium-api
+    spec:
+      containers:
+        - name: guardium-api
+          image: guardium-api
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NODE_ENV
+              value: "development"
+            - name: PORT
+              value: "5000"
+            - name: RESEND_API_KEY
+              value: "re_TpHYkejn_FZf3PaHozxFz8j82ATPYg5Bq"
+            - name: JWT_SECRET
+              value: "a3f8c2d1e4b5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1"
+            - name: MONGO_URI
+              value: "mongodb+srv://ganggang:gang123@guardium.asvnslg.mongodb.net/"
+            - name: RABBITMQ_URL
+              value: "amqp://api_user:secure_password@host.minikube.internal:5672/api_monitoring"
+            - name: RABBITMQ_QUEUE
+              value: "api_hits"
