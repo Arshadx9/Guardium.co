@@ -31,7 +31,7 @@ export function middleware() {
         res.on("finish", () => {
             const hitData = {
                 apiKey: guardiumApiKey,
-                endpoint: req.path,
+                endpoint: req.originalUrl,  // ✅ fixed: was req.path which returned '/' relative to router mount
                 method: req.method,
                 statusCode: res.statusCode,
                 latencyMs: Date.now() - start,
