@@ -34,7 +34,7 @@ channel.consume(config.rabbitmq.queue , async (msg)=>{
     }
 })
 
-    logger.info("Processor started, listening to queue:", config.rabbitmq.queue)
+    logger.info("Processor started successfully, listening to queue:", config.rabbitmq.queue)
 
 
 }
