@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 
-const API_URL = "http://13.63.53.44:5000"
+const API_URL = ""
 
 type EndpointHit = {
     endpoint: string
